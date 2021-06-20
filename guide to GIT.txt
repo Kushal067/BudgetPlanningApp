@@ -1,0 +1,27 @@
+------------------------git commands----------------------------------------------------
+right click on project then select show in local terminal
+->git init
+->git status
+->git add .
+->git commit -m "initial commit"
+->git remote add origin https://github.com/Kushal067/springboot-mongoDb.git
+->git push origin master
+
+after the app is deployed in heroku. here is the final production url
+https://spring-boot-mongodb-kushal067.herokuapp.com/todos/60883b7498e626778d35d092 -> use this url to make request in postman
+
+-------------------------To commit changes into Git repository------------------------------
+right click on project then select show in local terminal
+->git init
+->git status
+->git add .
+->git commit -m "second commit"
+->git push https://github.com/Kushal067/springboot-mongoDb.git master
+
+Now inmplement changes into heroku aswell to do this follow below steps
+->Login to heroku and open the App
+->now click "Deploy branch" 
+______________________________________________________________________________________________
+-----------------------to kill a job running on 8080 port-------------------------------------
+netstat -ano | findstr < Port Number >
+taskkill /F /PID < Process Id >

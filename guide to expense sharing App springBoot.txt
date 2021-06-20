@@ -1,0 +1,86 @@
+post request to singup
+localhost:8080/api/v1/auth/signup
+...
+{ 
+"username":"kushal1",
+"email":"kushalreddy6789@gmail.com",
+"password":"password",
+"mobile":"8466816789",
+"profiePictureString":"",
+"name":"kushal",
+"roles":["user"]
+}
+---------------------------------------------------------------------------------------------------------
+post request to singin (or) login
+localhost:8080/api/v1/auth/signin
+...
+{ 
+"username":"kushal1",
+"password":"password"
+}
+----------------------------------------------------------------------------------------------------------
+get method to get tour by ID
+localhost:8080/api/v1/tour/{tourId}
+----------------------------------------------------------------------------------------------------------
+post request to create tour
+
+localhost:8080/api/v1/tour/
+...
+{
+"name": "tour1",
+"active": false,    
+"participants": [{"id":"60962912a4320d47675399ef"},{"id":"60963b65a4320d47675399f0"}]
+}
+-----------------------------------------------------------------------------------------------------------
+post request to add bill
+
+localhost:8080/api/v1/tour/609bded1dd8b922e94a5200f/addBill
+...
+{
+"billNote": "tour2_bill_3",
+"amountSpent": "200",    
+"splitBillOn": [{"id":"609a8175a10f24391b2dd3dd"},{"id":"609a7c80a10f24391b2dd3dc"}]
+}
+-----------------------------------------------------------------------------------------------------------
+post request to end tour
+
+localhost:8080/api/v1/tour/
+60ce211293b3fc71448abcd/endTour
+-----------------------------------------------------------------------------------------------------------
+post
+localhost:8080/api/v1/user/addToMyFavorites
+...
+   
+[{"id":"609a7c80a10f24391b2dd3dc"},{"id":"609f91a51ca8c5562900ddec"}]
+-----------------------------------------------------------------------------------------------------------
+localhost:8080/api/v1/user/removeFromMyFavorites
+...
+{"id":"60b12b359f047c0f22770a5f"}
+-----------------------------------------------------------------------------------------------------------
+get method  to get details of user logged in
+
+localhost:8080/api/v1/user/getMyDetails
+...
+------------------------------------------------------------------------------------------------------------
+get method to get favorites of userloggedin
+
+localhost:8080/api/v1/user/myFavorites
+...
+------------------------------------------------------------------------------------------------------------
+ post method to upload profilepicture(Note:select form-data in body tab and uncheck Content-Type in headers tab)
+
+localhost:8080/api/v1/user/uploadProfilePicture
+...
+-------------------------------------------------------------------------------------------------------------
+get method to find users/contacts like(username, name)
+
+localhost:8080/api/v1/user/findUsers?userInfo=xyz
+--------------------------------------------------------------------------------------------------------------
+get method to find user by ID
+
+localhost:8080/api/v1/user/getUserById/{id}
+
+
+
+
+
