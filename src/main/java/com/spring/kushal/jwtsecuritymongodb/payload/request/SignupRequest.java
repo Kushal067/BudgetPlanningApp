@@ -31,7 +31,12 @@ public class SignupRequest {
     private String name;
     
 
-    public SignupRequest(@NotBlank @Size(min = 4, max = 20) String username, @Email @NotBlank String email,
+    public SignupRequest() {
+		super();
+	}
+
+
+	public SignupRequest(@NotBlank @Size(min = 4, max = 20) String username, @Email @NotBlank String email,
 			@NotBlank @Size(min = 6, max = 40) String password, @NotBlank @Size(max = 10, min = 10) String mobile,
 			@NotBlank @Size(min = 3, max = 25) String name, Set<String> roles) {
 		super();
