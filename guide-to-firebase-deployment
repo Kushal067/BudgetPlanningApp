@@ -1,0 +1,15 @@
+
+ng build --prod
+
+firebase login
+
+firebase init
+
+firebase deploy
+
+Hosting URL: https://budget-planner-bf974.web.app
+
+to update changes on server:
+ng build --prod
+firebase deploy
+

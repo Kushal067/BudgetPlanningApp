@@ -1,5 +1,6 @@
 package com.spring.kushal.jwtsecuritymongodb.repository;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
@@ -19,7 +20,7 @@ public interface UserRepository extends MongoRepository<User, String> {
     Boolean existsByEmail(String email);
 
     
-    @Query(fields = "{'tours':0 , 'roles':0, 'profilePicture':0}")
-    Optional<List<User>> findByUsernameOrNameIsLike(String username,String name); 
+    @Query(fields = "{'tours':0 , 'roles':0, 'profilePicture':0}" )
+    Optional<List<User>> findByUsernameOrNameIsLike(String username,String name,Pageable pageable); 
     
 }

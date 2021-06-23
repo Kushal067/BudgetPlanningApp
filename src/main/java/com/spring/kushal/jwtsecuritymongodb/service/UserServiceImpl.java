@@ -5,6 +5,8 @@ import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.spring.kushal.jwtsecuritymongodb.exception.UserException;
@@ -79,8 +81,8 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public List<User> findUserByUsernameOrNameIsLike(String username, String name) {
-		
-		return userRepository.findByUsernameOrNameIsLike(username, name).get();
+		Pageable paging = PageRequest.of(0, 10);
+		return userRepository.findByUsernameOrNameIsLike(username, name, paging).get();
 		
 	}
 	
