@@ -76,15 +76,11 @@ public class UserServiceImpl implements UserService {
 		user2.setProfilePicture(user.getProfilePicture()!=null?user.getProfilePicture():user2.getProfilePicture());
 		userRepository.save(user2);
 		}
-		
-	}
-
-	@Override
-	public List<User> findUserByUsernameOrNameIsLike(String username, String name) {
-		Pageable paging = PageRequest.of(0, 10);
-		return userRepository.findByUsernameOrNameIsLike(username, name, paging).get();
-		
 	}
 	
-
+	@Override
+	public List<User> findUserByUsernameOrNameIsLike(String username, String name) {
+		Pageable paging = PageRequest.of(0, 2);
+		return userRepository.findByUsernameOrNameIsLike(username, name, paging).get();
+	}
 }
