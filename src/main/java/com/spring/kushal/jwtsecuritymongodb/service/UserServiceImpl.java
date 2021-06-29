@@ -80,7 +80,7 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public List<User> findUserByUsernameOrNameIsLike(String username, String name) {
-		Pageable paging = PageRequest.of(0, 2);
+		Pageable paging = PageRequest.of(0, 10);
 		return userRepository.findByUsernameOrNameIsLike(username, name, paging).get();
 	}
 }
