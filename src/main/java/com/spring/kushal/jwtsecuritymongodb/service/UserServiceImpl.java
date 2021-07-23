@@ -77,7 +77,7 @@ public class UserServiceImpl implements UserService {
 		userRepository.save(user2);
 		}
 	}
-	
+	 
 	@Override
 	public List<User> findUserByUsernameOrNameIsLike(String username, String name) {
 		Pageable paging = PageRequest.of(0, 10);

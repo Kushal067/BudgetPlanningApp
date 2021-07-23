@@ -37,7 +37,7 @@ public class TourController {
 	UserService userService;
 	
 	@GetMapping("/{tourId}")
-	 @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
+	@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 	public ResponseEntity<?> getTourById(@PathVariable("tourId") String tourId){		
 		try {
 			Tour tour=tourService.getTourByID(tourId);
@@ -49,7 +49,7 @@ public class TourController {
 	}
 	
 	@PostMapping("/{tourId}/addBill")
-	 @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
+	@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 	public ResponseEntity<?> addBill(@PathVariable("tourId") String tourId, @RequestBody Expenditure exp) {
 		try {
 		UserDetailsImpl userDetails =

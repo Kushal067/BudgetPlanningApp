@@ -156,7 +156,6 @@ public class UserController {
 	}
 	
 	@GetMapping("/getUserById/{id}")
-	
 	public ResponseEntity<?> getUserById(@PathVariable("id") String id) throws UserException{
 		User user= userService.getUser(id);
 		user.setTours(null);

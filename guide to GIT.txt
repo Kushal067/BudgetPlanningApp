@@ -18,6 +18,12 @@ right click on project then select show in local terminal
 ->git commit -m "second commit"
 ->git push https://github.com/Kushal067/springboot-mongoDb.git master
 
+------------------------to revert back changes in git-----------------------------------------------
+git revert "initial commit"
+                |
+                V
+            name of commit can be anything        
+----------------------------------------------------------------------------------------------------
 Now inmplement changes into heroku aswell to do this follow below steps
 ->Login to heroku and open the App
 ->now click "Deploy branch" 
